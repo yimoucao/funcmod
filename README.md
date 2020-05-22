@@ -17,6 +17,11 @@ close(ch)
 iterable2 := funcmod.IterChan(ch)
 ```
 
+## Convert Iterable to list
+```
+funcmod.List(iterable1)
+```
+
 ## Map
 
 ```
