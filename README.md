@@ -5,14 +5,16 @@ functional programming for go
 ## Create Iterable
 
 ```
-funcmod.IterList([]interface{}{1, 2, 3, 4})
+// use IterList()
+iterable1 := funcmod.IterList([]interface{}{1, 2, 3, 4})
 
+// use Channel
 ch := make(chan interface{}, 4)
 for i := 0; i < 4; i++ {
     ch <- i
 }
 close(ch)
-funcmod.IterChan(ch)
+iterable2 := funcmod.IterChan(ch)
 ```
 
 ## Map
